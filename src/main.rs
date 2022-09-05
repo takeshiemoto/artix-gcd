@@ -40,7 +40,7 @@ fn post_gcd(form: web::Form<GcdParameters>) -> HttpResponse {
     if form.n == 0 || form.m == 0 {
         return HttpResponse::BadRequest()
             .content_type("text/html")
-            .body("Conputing the GCD with zero is boring.");
+            .body("Computing the GCD with zero is boring.");
     }
 
     let response = format!(
